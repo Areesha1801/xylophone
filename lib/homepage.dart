@@ -27,7 +27,31 @@ class XylophoneApp extends StatelessWidget {
       title: 'Home Page',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
+        appBar: AppBar(
+          actions: [
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.asset(
+                    "images/xylophone.jpg",
+                    alignment: Alignment.centerLeft,
+                    height: 60,
+                    width: 60,
+                  ),
+                  const Text(
+                    '     Xylophone App',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+          backgroundColor: Colors.black,
+        ),
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
